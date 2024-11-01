@@ -1,16 +1,16 @@
-import 'package:switch_db/src/features/data/data_sources/remote/abstract_game_api.dart';
-import 'package:switch_db/src/features/domain/models/game_model.dart';
 import 'package:dio/dio.dart';
-import '../../../../core/network/error/cancel_token_exception.dart';
-import '../../../../core/network/error/dio_exception_handler.dart';
-import '../../../../core/network/error/server_exception.dart';
+import '../../../../../core/network/error/cancel_token_exception.dart';
+import '../../../../../core/network/error/dio_exception_handler.dart';
+import '../../../../../core/network/error/server_exception.dart';
 import '../../../domain/models/api_response.dart';
+import '../../../domain/models/game_model.dart';
 import '../../../domain/models/games_params.dart';
+import 'abstract_game_api.dart';
 
-class GameApiImpl extends GameApi {
+class GamesApiImpl extends GamesApi {
   final Dio dio;
 
-  GameApiImpl(this.dio);
+  GamesApiImpl(this.dio);
 
   @override
   Future<ApiResponse<List<GameModel>>> getGames(GamesParams params) async {
