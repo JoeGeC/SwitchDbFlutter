@@ -23,7 +23,8 @@ class ReleaseDatesModel {
     this.australia,
   });
 
-  factory ReleaseDatesModel.fromJson(json) => _$ReleaseDatesModelFromJson(json);
+  factory ReleaseDatesModel.fromJson(Map<String, dynamic> json) =>
+      _$ReleaseDatesModelFromJson(json);
 
-  toJson() => _$ReleaseDatesModelToJson(this);
+  Map<String, dynamic>toJson() => _$ReleaseDatesModelToJson(this);
 }

@@ -19,7 +19,8 @@ GameModel _$GameModelFromJson(Map<String, dynamic> json) => GameModel(
           .toList(),
       releaseDates: json['release_dates'] == null
           ? null
-          : ReleaseDatesModel.fromJson(json['release_dates']),
+          : ReleaseDatesModel.fromJson(
+              json['release_dates'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$GameModelToJson(GameModel instance) => <String, dynamic>{

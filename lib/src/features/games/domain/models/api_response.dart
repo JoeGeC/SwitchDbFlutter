@@ -2,23 +2,14 @@ import 'package:flutter/foundation.dart';
 
 class ApiResponse<T> {
   ApiResponse({
-    required this.status,
-    required this.copyright,
-    required this.numResults,
     required this.results,
   });
 
-  late final String? status;
-  late final String? copyright;
-  late final int? numResults;
   late final T? results;
 
-  static fromJson<T>(Map<dynamic, dynamic> json, Function tFromJson) {
+  static fromJson<T>(List<dynamic> json, Function tFromJson) {
     return ApiResponse<T>(
-      status: json['status'],
-      copyright: json['copyright'],
-      numResults: json['num_results'],
-      results: tFromJson(json['results']),
+      results: tFromJson(json),
     );
   }
 
