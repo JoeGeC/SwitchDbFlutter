@@ -11,7 +11,7 @@ class GamesParams {
 
   Map<String, dynamic> toJson() {
     final _data = <String, dynamic>{};
-    _data['period'] = name;
+    _data['name'] = name;
     return _data;
   }
 }
